@@ -61,13 +61,30 @@ public class Test {
 		afficheAge(morceauPhrase, age);
 		// faire la même chose que précédement mais avec une boucle for ete un if
 		afficheAgeBoucle(morceauPhrase, age);
+		System.out.println(" ");
+		// avec modulo
+		afficheAgeModulo(morceauPhrase,age);
 
 	}
 
+	private static void afficheAgeModulo(String[] morceauPhrase, int age) {
+		System.out.println("Methode modulo");
+		for(int i =0; i<morceauPhrase.length; i++) {
+			if(i%2==1) {
+				System.out.print(" " + age + " ");
+			}
+			System.out.print(morceauPhrase[i]);
+		}
+	}
+	
+	
+	
+	
 	private static void afficheAgeBoucle(String[] morceauPhrase, int age) {
 		for (String morceau : morceauPhrase) {
 			System.out.print(morceau);
-			if(morceau==morceauPhrase[morceauPhrase.length-2]) {
+			// if(morceau==morceauPhrase[morceauPhrase.length-2]) { correction ligne suivante
+				if(!morceau.equals(morceauPhrase[morceauPhrase.length-1])) {
 				System.out.print(" "+ age + " ");
 			}
 		}
