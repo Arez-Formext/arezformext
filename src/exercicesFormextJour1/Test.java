@@ -14,6 +14,7 @@ public class Test {
 	 */
 	public static void main(String[] args) {
 		// TODO It starts all code, add methods and other classes must be call from here
+		// try to be clear and simple
 
 	}
 
