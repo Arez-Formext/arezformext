@@ -52,7 +52,19 @@ public class Test {
 		afficheParBoucleDo(tableau);
 		// affiche les élément d'un tableau par une boucle while
 		afficheParBoucleForeach(tableau);
+		
+		
+		// deux chaine de caractere dans un tableau "tu as" et "ans"
+		// une valeur int de l'age dans une variable
+		String[] morceauPhrase = {"Tu as", "ans"};
+		int age = 18;
+		afficheAge(morceauPhrase, age);
 
+	}
+
+	private static void afficheAge(String[] morceauPhrase, int age) {
+		System.out.println(morceauPhrase[0] + " " + age + " " + morceauPhrase[1]);
+		
 	}
 
 	/**
