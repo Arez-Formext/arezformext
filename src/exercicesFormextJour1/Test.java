@@ -59,7 +59,19 @@ public class Test {
 		String[] morceauPhrase = {"Tu as", "ans"};
 		int age = 18;
 		afficheAge(morceauPhrase, age);
+		// faire la même chose que précédement mais avec une boucle for ete un if
+		afficheAgeBoucle(morceauPhrase, age);
 
+	}
+
+	private static void afficheAgeBoucle(String[] morceauPhrase, int age) {
+		for (String morceau : morceauPhrase) {
+			System.out.print(morceau);
+			if(morceau==morceauPhrase[morceauPhrase.length-2]) {
+				System.out.print(" "+ age + " ");
+			}
+		}
+		
 	}
 
 	private static void afficheAge(String[] morceauPhrase, int age) {
