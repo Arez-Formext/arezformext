@@ -24,7 +24,8 @@ public class Test {
 		affiche("Bonjour");
 		affiche("à tous");
 		/*
-		 * exercice 1 crée un tableau de string, puis afficher la concatenation du
+		 * exercice 1 crée un tableau de string, puis 
+		 * afficher la concatenation du
 		 * contenu du tableau
 		 */
 
