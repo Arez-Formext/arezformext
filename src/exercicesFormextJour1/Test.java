@@ -83,6 +83,7 @@ public class Test {
 		String test = null;
 		Scanner entreeClavierConsole = new Scanner(System.in);
 		test = entreeClavierConsole.nextLine();
+		
 		return test;
 	}
 
