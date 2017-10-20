@@ -65,9 +65,18 @@ public class Test {
 		System.out.println(" ");
 		// avec modulo
 		afficheAgeModulo(morceauPhrase,age);
+		
+		// if ternaire exemple inbriqué, deux conditions, trois résultats possibles
+		String cat = age<18? age>3? "pas enfant":"enfant" :"adulte";
+		System.out.println("\nLa personne est classée dans la catégorie : "+cat);
 
 	}
 
+	/**
+	 * 
+	 * @param morceauPhrase
+	 * @param age
+	 */
 	private static void afficheAgeModulo(String[] morceauPhrase, int age) {
 		System.out.println("Methode modulo");
 		for(int i =0; i<morceauPhrase.length; i++) {
@@ -149,7 +158,7 @@ public class Test {
 	}
 
 	/**
-	 * Affiche une chaine de carateres en parametre
+	 * Affiche une chaine de carateres passée en parametre
 	 * 
 	 * @param texte
 	 */
@@ -158,7 +167,7 @@ public class Test {
 	}
 
 	/**
-	 * Affiche les éléments d'un tableau
+	 * Affiche les éléments d'un tableau de deux éléments séparés par un espace
 	 * 
 	 * @param tab
 	 */
