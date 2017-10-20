@@ -4,6 +4,7 @@
 package exercicesFormextJour1;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * @author dev
@@ -24,8 +25,7 @@ public class Test {
 		affiche("Bonjour");
 		affiche("à tous");
 		/*
-		 * exercice 1 crée un tableau de string, puis 
-		 * afficher la concatenation du
+		 * exercice 1 crée un tableau de string, puis afficher la concatenation du
 		 * contenu du tableau
 		 */
 
@@ -53,22 +53,49 @@ public class Test {
 		afficheParBoucleDo(tableau);
 		// affiche les élément d'un tableau par une boucle while
 		afficheParBoucleForeach(tableau);
-		
-		
+
 		// deux chaine de caractere dans un tableau "tu as" et "ans"
 		// une valeur int de l'age dans une variable
-		String[] morceauPhrase = {"Tu as", "ans"};
+		String[] morceauPhrase = { "Tu as", "ans" };
 		int age = 18;
 		afficheAge(morceauPhrase, age);
-		// faire la même chose que précédement mais avec une boucle for ete un if
+
+		// faire la même chose que précédement mais avec une boucle for et un if
 		afficheAgeBoucle(morceauPhrase, age);
 		System.out.println(" ");
-		// avec modulo
-		afficheAgeModulo(morceauPhrase,age);
-		
-		// if ternaire exemple inbriqué, deux conditions, trois résultats possibles
-		String cat = age<18? age>3? "pas enfant":"enfant" :"adulte";
-		System.out.println("\nLa personne est classée dans la catégorie : "+cat);
+		// faire la même chose que précédement maisavec modulo
+		afficheAgeModulo(morceauPhrase, age);
+
+		// faire la même chose que précédement maisavec if ternaire
+		afficheAgeTernaire(morceauPhrase, age);
+
+		// Exemple de if ternaire exemple inbriqué, deux
+		// conditions, trois résultats possibles
+		afficheCategoriePersonne(age);
+
+		// Exemple de Scanner
+		String clavier = recupereEntréeClavier();
+		System.out.println("l\'entée clavier est : " + clavier);
+
+	}
+
+	private static String recupereEntréeClavier() {
+		String test = null;
+		Scanner entreeClavierConsole = new Scanner(System.in);
+		test = entreeClavierConsole.nextLine();
+		return test;
+	}
+
+	private static void afficheAgeTernaire(String[] morceauPhrase, int age) {
+		for (int i = 0; i < morceauPhrase.length; i++) {
+			String resultat = i < 1 ? morceauPhrase[i] + " " + age + " " : morceauPhrase[i];
+		}
+
+	}
+
+	private static void afficheCategoriePersonne(int age) {
+		String cat = age < 18 ? age > 3 ? "pas enfant" : "enfant" : "adulte";
+		System.out.println("\nLa personne est classée dans la catégorie : " + cat);
 
 	}
 
@@ -79,31 +106,29 @@ public class Test {
 	 */
 	private static void afficheAgeModulo(String[] morceauPhrase, int age) {
 		System.out.println("Methode modulo");
-		for(int i =0; i<morceauPhrase.length; i++) {
-			if(i%2==1) {
+		for (int i = 0; i < morceauPhrase.length; i++) {
+			if (i % 2 == 1) {
 				System.out.print(" " + age + " ");
 			}
 			System.out.print(morceauPhrase[i]);
 		}
 	}
-	
-	
-	
-	
+
 	private static void afficheAgeBoucle(String[] morceauPhrase, int age) {
 		for (String morceau : morceauPhrase) {
 			System.out.print(morceau);
-			// if(morceau==morceauPhrase[morceauPhrase.length-2]) { correction ligne suivante
-				if(!morceau.equals(morceauPhrase[morceauPhrase.length-1])) {
-				System.out.print(" "+ age + " ");
+			// if(morceau==morceauPhrase[morceauPhrase.length-2]) { correction ligne
+			// suivante
+			if (!morceau.equals(morceauPhrase[morceauPhrase.length - 1])) {
+				System.out.print(" " + age + " ");
 			}
 		}
-		
+
 	}
 
 	private static void afficheAge(String[] morceauPhrase, int age) {
 		System.out.println(morceauPhrase[0] + " " + age + " " + morceauPhrase[1]);
-		
+
 	}
 
 	/**
